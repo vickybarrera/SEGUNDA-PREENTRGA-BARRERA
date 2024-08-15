@@ -10,56 +10,62 @@ body {
 }
 
 /*encabezado*/
-.bg-body-nav{
+.bg-body-nav {
     background-color: rgb(236, 192, 133);
 }
+
 .logo {
     width: 70px;
     height: 60px;
     float: left;
 }
-.nav-link{
+
+.nav-link {
     background-color: black;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /*fin del encabezado*/
-.grid-container{
+main {
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    border: 1px solid black;
+flex-direction: row;
+flex-wrap: wrap;
 }
 
-.caja1 {
-    width: 100%;
-    height: 315px;
-    margin: 10%;
+.flex-container1 {
     display: flex;
-    justify-content: center;
 }
 
 .video {
     display: flex;
     margin: 10px;
     display: inline flex;
+
 }
 
 .cafe {
-    width: 40%;
+    width: 70%;
     height: auto;
-    display: flex inline;
-    justify-content: center;
-    flex-flow: wrap;
-    margin: 0px;
 
+    flex-flow: wrap;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    flex:1 1 70%;
+	 
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+	justify-content:flex-start;
 }
 
 .cafe h1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 35px;
+    
+
+    text-align: center;
 }
 
 .cafe p {
@@ -67,13 +73,14 @@ body {
     font-size: 20px;
     text-align: center;
 
+
 }
 
 .caja2 {
     width: 100%;
     height: auto;
     margin: 10px;
-
+flex-wrap: wrap;
 
 }
 
@@ -81,54 +88,31 @@ body {
     text-align: center;
     font-size: 35px;
     font-family: 'Times New Roman', Times, serif;
+    flex-direction: column;
+    display: flex;
 }
 
-.tipos1 {
-    width: 30%;
-    display: flex inline;
+.tipos {
+    display: flex;
+    flex-wrap:nowrap;
     margin: 15px 20px;
 }
 
-.tipos1 p {
+.tipos p {
     font-family: "Nunito", sans-serif;
     font-size: 20px;
     display: flex;
     text-align: center;
 }
 
-.tipos2 {
-    width: 30%;
-    margin: 15px 20px;
-    display: flex inline;
-}
+h5 {
+    display: block;
+margin: 1%;
 
-.tipos2 p {
-    font-family: "Nunito", sans-serif;
-    font-size: 20px;
-    display: flex;
-    text-align: center;
-}
-
-.tipos3 {
-    width: 30%;
-    display: flex inline;
-    margin: 15px 20px;
-}
-
-.tipos3 p {
-    font-family: "Nunito", sans-serif;
-    font-size: 20px;
-    display: flex;
-    text-align: center;
-}
-
-.imgColado img {
-    width: 100%;
-    height: 500px;
 }
 
 footer {
-    background-color: rgb(124, 66, 0);
+    background-color: rgb(236, 192, 133);
     bottom: 0px;
     width: 100%;
     height: 45px;
@@ -140,7 +124,7 @@ footer {
 }
 
 footer h6 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     color: black;
     font-style: oblique;
@@ -153,31 +137,47 @@ footer a img {
     height: 40px;
 
 }
-
+.opcionesCafe {
+    align-items: center;
+}
 .opcionesCafe h1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 35px;
-    margin: 10px 0px 10px 250px;
+    align-items: center;
 
+}
+
+.menu {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    height: auto;
+    align-items: center;
 }
 
 .opcionesCafe img {
     margin: 20px;
     display: inline;
-    width: 40%;
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 1/4;
 }
 
 .opcionesComida h2 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 35px;
-    margin: 10px 0px 10px 250px;
+    text-align: center;
 
 }
 
 .opcionesComida img {
     margin: 20px;
     display: inline;
-    width: 40%;
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 1/4;
+
 }
 
 .locales {
